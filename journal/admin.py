@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from journal.models import *
+
+
+@admin.register(Group, Student, Subject, Lesson, LessonResult)
+class GroupAdmin(admin.ModelAdmin):
+    pass
